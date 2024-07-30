@@ -9,6 +9,7 @@ const initialState = {
   mixed_items: [],
   banners: [],
   error: false,
+  errMsg: null,
 };
 
 const url = app_data.api.root_url;
@@ -41,7 +42,11 @@ const dataSlice = createSlice({
   initialState,
   reducers: {
     removeError: (state, action) => {
-      state.error = false;
+      state.error = null;
+    },
+    setError: (state, action) => {
+      state.errMsg = action.payload;
+      state.error = true;
     },
   },
   extraReducers: (builder) => {

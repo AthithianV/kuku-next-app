@@ -12,6 +12,8 @@
     align-items: center;
     width: fit-content;
     padding: 10px;
+    box-shadow: 0 0 0.2rem -0.2rem #222;
+    position: relative;
 }
 
 .wrapper h4{

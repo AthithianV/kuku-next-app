@@ -1,4 +1,5 @@
 # Kuku FM Clone App
+
 1. This is single page application that components for Banner, sections etc.
 2. It has a fixed Navigation Bar and also a sidebar that can be toggled.
 3. It has carousals for banner and shows for various categories.
@@ -7,9 +8,11 @@
 6. Site is full Responsive.
 
 # Deployment Link
+
 [https://kukufm.netlify.app/](https://kukufm.netlify.app/)
 
 ## Steps to Run locally.
+
 1. To clone the project: `git clone https://github.com/AthithianV/kuku-next-app.git`
 2. Move to the project directory: `cd kuku-next-app`
 3. Install Packages: `npm install`

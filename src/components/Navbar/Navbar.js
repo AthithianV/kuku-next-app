@@ -1,10 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Brand from "../Brand/Brand";
 import css from "./Navbar.module.css";
-import { faBars, faArrowTrendUp, faStar, faHandFist, faHeart, faGhost, faDownload } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faArrowTrendUp,
+  faStar,
+  faHandFist,
+  faHeart,
+  faGhost,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { dataAction } from "@/store/reducers/data.reducer";
 
+export default function Navbar({ setSideBar }) {
+  const dispatch = useDispatch();
 
-export default function Navbar({setSideBar}) {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -13,14 +24,16 @@ export default function Navbar({setSideBar}) {
         top: element.offsetTop - offset,
         behavior: "smooth",
       });
+    } else {
+      dispatch(dataAction.setError("Scroll to Explore More!!!"));
     }
   };
 
   return (
     <nav className={css.navbar}>
       <div className={css.left}>
-        <div className={`${css.navbarIcon}`} onClick={()=>setSideBar(true)}>
-          <FontAwesomeIcon icon={faBars} className={css.icon}/>
+        <div className={`${css.navbarIcon}`} onClick={() => setSideBar(true)}>
+          <FontAwesomeIcon icon={faBars} className={css.icon} />
         </div>
         <Brand />
       </div>
@@ -31,31 +44,36 @@ export default function Navbar({setSideBar}) {
             className={`${css.languages} ${css.navElement}`}
             onClick={() => scrollToSection("top10")}
           >
-            <FontAwesomeIcon icon={faArrowTrendUp} className={css.icon}/>Top 10 India
+            <FontAwesomeIcon icon={faArrowTrendUp} className={css.icon} />
+            Top 10 India
           </div>
           <div
             className={`${css.premium} ${css.navElement}`}
             onClick={() => scrollToSection("vipshows")}
           >
-            <FontAwesomeIcon icon={faStar} className={css.icon}/>VIP shows
+            <FontAwesomeIcon icon={faStar} className={css.icon} />
+            VIP shows
           </div>
           <div
             className={`${css.auth} ${css.navElement}`}
             onClick={() => scrollToSection("Motivation")}
           >
-            <FontAwesomeIcon icon={faHandFist} className={css.icon}/>Motivation
+            <FontAwesomeIcon icon={faHandFist} className={css.icon} />
+            Motivation
           </div>
           <div
             className={`${css.auth} ${css.navElement}`}
             onClick={() => scrollToSection("Love")}
           >
-            <FontAwesomeIcon icon={faHeart} className={css.icon}/>Love
+            <FontAwesomeIcon icon={faHeart} className={css.icon} />
+            Love
           </div>
           <div
             className={`${css.auth} ${css.navElement}`}
             onClick={() => scrollToSection("Horror")}
           >
-            <FontAwesomeIcon icon={faGhost} className={css.icon}/>Horror
+            <FontAwesomeIcon icon={faGhost} className={css.icon} />
+            Horror
           </div>
         </div>
         <div className={`${css.download} ${css.navElement}`}>
@@ -64,7 +82,7 @@ export default function Navbar({setSideBar}) {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faDownload} className={css.icon}/>
+            <FontAwesomeIcon icon={faDownload} className={css.icon} />
           </a>
         </div>
       </div>

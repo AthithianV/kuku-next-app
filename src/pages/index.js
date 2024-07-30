@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   dataSelector,
   fetchMoreData,
   getData,
-} from '../store/reducers/data.reducer';
-import Navbar from '../components/Navbar/Navbar';
-import Banner from '../components/Banner/Banner';
-import Carousal from '../components/Carousal/Carousal';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import Loader from '../components/Loader/Loader';
-import Sections from '../components/Sections/Sections';
-import { ColorRing } from 'react-loader-spinner';
-import Error from '../components/Error/Error';
-import Footer from '../components/Footer/Footer';
-import Sidebar from '../components/SideBar/SideBar';
-import BlackScreen from '../components/BlackScreen/BlackScreen';
-import { initializeStore } from '../store/store';
+} from "../store/reducers/data.reducer";
+import Navbar from "../components/Navbar/Navbar";
+import Banner from "../components/Banner/Banner";
+import Carousal from "../components/Carousal/Carousal";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Loader from "../components/Loader/Loader";
+import Sections from "../components/Sections/Sections";
+import { ColorRing } from "react-loader-spinner";
+import Error from "../components/Error/Error";
+import Footer from "../components/Footer/Footer";
+import Sidebar from "../components/SideBar/SideBar";
+import BlackScreen from "../components/BlackScreen/BlackScreen";
+import { initializeStore } from "../store/store";
 
 export async function getServerSideProps() {
   const store = initializeStore();
@@ -64,7 +64,7 @@ const HomePage = () => {
             width="80"
             ariaLabel="color-ring-loading"
             wrapperClass="color-ring-wrapper"
-            colors={['#EF4130', '#EF4130', '#EF4130', '#EF4130', '#EF4130']}
+            colors={["#EF4130", "#EF4130", "#EF4130", "#EF4130", "#EF4130"]}
           />
         </div>
       ) : (
@@ -75,7 +75,7 @@ const HomePage = () => {
               item.content && (
                 <div
                   key={index}
-                  id={item.title === 'Top 10 India' ? 'top10' : 'vipshows'}
+                  id={item.title === "Top 10 India" ? "top10" : "vipshows"}
                 >
                   <h2>{item.title}</h2>
                   <Carousal data={item.content} />
