@@ -10,8 +10,8 @@
 [https://kukufm.netlify.app/](https://kukufm.netlify.app/)
 
 ## Steps to Run locally.
-1. To clone the project: `git clone https://github.com/AthithianV/kuku-clone.git`
-2. Move to the project directory: `cd kuku-clone`
+1. To clone the project: `git clone https://github.com/AthithianV/kuku-next-app.git`
+2. Move to the project directory: `cd kuku-next-app`
 3. Install Packages: `npm install`
 4. Run the application in development mode: `npm run dev`
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
