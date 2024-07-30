@@ -1,5 +1,6 @@
 .footer{
-    height: 20vh;
+    width: 100vw;
+    min-height: 20vh;
     background-color: black;
     margin-top: 25px;
     color: white;
