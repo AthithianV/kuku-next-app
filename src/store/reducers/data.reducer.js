@@ -49,6 +49,9 @@ const dataSlice = createSlice({
       .addCase(getData.fulfilled, (state, action) => {
         const { items } = action.payload;
         state.data = [];
+        if(!items[3] || !items[4]){
+          return;
+        }
         state.data.push({
           title: "Top 10 India",
           content: items[3].mixed_content_items,
