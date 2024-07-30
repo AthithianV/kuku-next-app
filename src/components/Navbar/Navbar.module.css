@@ -1,4 +1,5 @@
 .navbar{
+    width: 100vw;
     height: 5vh;
     background-color: var(--theme);
     color: white;

@@ -6,7 +6,7 @@ export default function Footer(){
     return <div className={css.footer}>
         <div className={css.left}>
             <h2>Author: </h2>
-            <table>
+            <table className={css.table}>
                 <tbody>
                     <tr>
                         <td>Name: </td>
@@ -14,7 +14,7 @@ export default function Footer(){
                     </tr>
                     <tr>
                         <td>Mail: </td>
-                        <td>Mail: athithianpkt2001@gmail.com</td>
+                        <td>athithianpkt2001@gmail.com</td>
                     </tr>
                     {/* <tr>
                         <td>Phone</td>
