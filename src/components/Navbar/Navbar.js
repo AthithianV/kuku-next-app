@@ -20,7 +20,7 @@ export default function Navbar({setSideBar}) {
     <nav className={css.navbar}>
       <div className={css.left}>
         <div className={`${css.navbarIcon}`} onClick={()=>setSideBar(true)}>
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} className={css.icon}/>
         </div>
         <Brand />
       </div>

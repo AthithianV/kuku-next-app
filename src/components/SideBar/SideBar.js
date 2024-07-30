@@ -22,7 +22,7 @@ export default function Sidebar({setSideBar, sideBar}){
             <div className={css.header}>
                 <div className={css.brand}>KUKU<span className={css.fm}>FM</span></div>
                 <div className={css.close} onClick={()=>setSideBar(false)}>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faXmark} style={{height: "20px", width: "20px"}}/>
                 </div>
             </div>
 
@@ -31,31 +31,31 @@ export default function Sidebar({setSideBar, sideBar}){
                     className={`${css.languages} ${css.navElement}`}
                     onClick={() => scrollToSection("top10")}
                 >
-                    <FontAwesomeIcon style={{marginRight: "10px"}} icon={faArrowTrendUp}/>Top 10 India
+                    <FontAwesomeIcon className={css.icon} icon={faArrowTrendUp}/>Top 10 India
                 </li>
                 <li
                     className={`${css.premium} ${css.navElement}`}
                     onClick={() => scrollToSection("vipshows")}
                 >
-                    <FontAwesomeIcon style={{marginRight: "10px"}} icon={faStar}/>VIP shows
+                    <FontAwesomeIcon className={css.icon} icon={faStar}/>VIP shows
                 </li>
                 <li
                     className={`${css.auth} ${css.navElement}`}
                     onClick={() => scrollToSection("Motivation")}
                 >
-                    <FontAwesomeIcon style={{marginRight: "10px"}} icon={faHandFist}/>Motivation
+                    <FontAwesomeIcon className={css.icon} icon={faHandFist}/>Motivation
                 </li>
                 <li
                     className={`${css.auth} ${css.navElement}`}
                     onClick={() => scrollToSection("Love")}
                 >
-                    <FontAwesomeIcon style={{marginRight: "10px"}} icon={faHeart}/>Love
+                    <FontAwesomeIcon className={css.icon} icon={faHeart}/>Love
                 </li>
                 <li
                     className={`${css.auth} ${css.navElement}`}
                     onClick={() => scrollToSection("Horror")}
                 >
-                    <FontAwesomeIcon style={{marginRight: "10px"}} icon={faGhost}/>Horror
+                    <FontAwesomeIcon className={css.icon} icon={faGhost}/>Horror
                 </li>
             </ul>
         </div>
