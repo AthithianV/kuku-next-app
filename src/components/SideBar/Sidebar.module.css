@@ -1,0 +1,92 @@
+.Sidebar{
+    width: 20vw;
+    height: 100vh;
+    background: #eee;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    transform: translateX(-200%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 12;
+    position: absolute;
+    top: 0;
+}
+
+.open{
+    transform: translateX(0%);
+}
+
+.header{
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--theme);
+}
+
+.fm{
+    background: var(--theme);
+    padding: 1px 2px;
+    border-radius: 3px;
+    color: white;
+    margin-left: 2px;
+}
+
+.close{
+    color: red;
+    cursor: pointer;
+}
+
+.links{
+    list-style: none;
+    padding: 0;
+}
+
+.links li{
+    font-weight: 600;
+    padding: 25px 20px;
+    cursor: pointer;
+    border-top: 1px solid lightgray;
+}
+
+.links li:hover{
+    color: var(--theme);
+}
+
+.links li i{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .Sidebar{
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Sidebar{
+        width: 30vw;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Sidebar{
+        width: 35vw;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Sidebar{
+        width: 40vw;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Sidebar{
+        width: 45vw;
+        font-size: 1rem;
+    }
+}

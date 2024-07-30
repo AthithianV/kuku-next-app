@@ -1,0 +1,30 @@
+.footer{
+    height: 20vh;
+    background-color: black;
+    margin-top: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer h2{
+    margin: 5px;
+}
+
+.footer h4{
+    margin: 5px;
+}
+
+.left{
+    padding: 20px;
+    padding-right: 40px;
+    height: 100%;
+}
+
+.right{
+    padding: 20px;
+    padding-left: 40px;
+    height: 100%;
+}

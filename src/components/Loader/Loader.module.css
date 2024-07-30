@@ -1,0 +1,22 @@
+.loader{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+.wrapper{
+    background-color: var(--theme);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+    color: white;
+}
+
+.wrapper h2{
+    width: fit-content;
+    margin: 0;
+}

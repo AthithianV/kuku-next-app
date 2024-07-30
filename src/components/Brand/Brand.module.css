@@ -1,0 +1,12 @@
+.brand{
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.fm{
+    color: var(--theme);
+    background-color: white;
+    border-radius: 2px;
+    margin: 0 0 0 2px;
+    padding: 0 1px;
+}
