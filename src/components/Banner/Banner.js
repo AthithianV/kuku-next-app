@@ -4,11 +4,11 @@ import { dataSelector } from "../../store/reducers/data.reducer.js";
 import { NextArrow, PrevArrow } from "../Arrows/Arrows";
 import Slider from "react-slick";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function Banner() {
   const { banners } = useSelector(dataSelector);
-
-  
 
   return (
     <div className={css.banner}>
@@ -18,15 +18,18 @@ export default function Banner() {
             <div className={css.item} key={index}>
               <div className={css.p2}>
                 <div className={css.imageContainer}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={500}
-                  height={500}
-                  // placeholder="blur"
-                />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={500}
+                    height={500}
+                    // placeholder="blur"
+                  />
                   <div className={css.playBtn}>
-                    <i className="fa-solid fa-play"></i>
+                    <FontAwesomeIcon
+                      icon={faPlay}
+                      style={{ height: "25px", width: "25px" }}
+                    />
                   </div>
                 </div>
                 <div className={css.itemBody}>{item.title}</div>

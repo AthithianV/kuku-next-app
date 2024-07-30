@@ -40,16 +40,16 @@ const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    removeError: (state, action)=>{
+    removeError: (state, action) => {
       state.error = false;
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
       .addCase(getData.fulfilled, (state, action) => {
         const { items } = action.payload;
         state.data = [];
-        if(!items[3] || !items[4]){
+        if (!items[3] || !items[4]) {
           return;
         }
         state.data.push({
