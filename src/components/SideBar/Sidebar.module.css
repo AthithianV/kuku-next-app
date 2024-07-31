@@ -9,6 +9,7 @@
     z-index: 12;
     position: fixed;
     top: 0;
+    box-sizing: border-box;
 }
 
 .open{
