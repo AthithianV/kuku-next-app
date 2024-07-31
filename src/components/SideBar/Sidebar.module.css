@@ -7,7 +7,7 @@
     transform: translateX(-200%);
     transition: transform 0.3s ease-in-out;
     z-index: 12;
-    position: absolute;
+    position: fixed;
     top: 0;
 }
 
